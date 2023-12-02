@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Hi i'm Plum Bear</title>
-   
+
 </head>
+
 <body>
+
+   <!-- A little help for the Netlify bots if you're not using a SSG -->
+   <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input required="" type="text" name="name" placeholder="Name" value="">
+      <input required="" type="email" name="email" placeholder="E-mail" value="">
+
+      <input type="radio" name="like" class="options-form__input" value="Yes!" checked>
+      <input type="radio" name="like" class="options-form__input" value="Yes of course!">
+
+      <textarea name="message" placeholder="Message"></textarea>
+
+      <input type="file" name="image" accept=".jpg, .png" class="file-form__input">
+
+      <input required="" type="checkbox" name="thebest" class="checkbox-form__input">
+
+      <button type="submit" class="btn small check form__button">Send</button>
+      
+   </form>
    <div id="root"></div>
 </body>
+
 </html>

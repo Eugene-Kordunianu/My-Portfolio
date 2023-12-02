@@ -72,8 +72,8 @@
 }
 .nav__items {
    cursor: pointer;
-   font-size: 2.4rem;
-   /* font-size: clamp(14px, calc(14px + (24 - 14) * ((100vw - 767.98px) / (1440 - 767.98))), 24px); */
+   /* font-size: 2.4rem; */
+   font-size: clamp(14px, calc(14px + (24 - 14) * ((100vw - 767.98px) / (1440 - 767.98))), 24px);
    font-weight: 500;
    text-transform: uppercase;
    display: flex;
@@ -90,8 +90,10 @@
    color: rgb(255, 255, 255);
    text-transform: uppercase;
    display: inline-block;
-   padding-bottom: 5px;
+   /* padding-bottom: 5px; */
    position: relative;
+   line-height: 1.5; /* 30/24 */
+   box-sizing: border-box;
 }
 /* ? варіант з лінією від 0% до 100% */
 /* .nav__link::after{
@@ -114,7 +116,7 @@
    position: absolute;
    height: 2px;
    background-color: white;
-   bottom: 0;
+   bottom: 0px;
    left: 50%;
    width: 0;
    transition:
@@ -122,6 +124,10 @@
       left 0.3s ease;
 }
 
+.nav__link:active:after {
+   left: 0;
+   width: 100%;
+}
 .nav__link:hover::after {
    left: 0;
    width: 100%;
@@ -209,6 +215,7 @@
       justify-content: flex-end;
    }
    .nav__items {
+      font-size: 2.4rem;
       flex-flow: column;
       align-items: flex-end;
    }

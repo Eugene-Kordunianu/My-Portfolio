@@ -4,6 +4,11 @@
    --cl-black-header: #051e55;
 
    --p-auto: clamp(1rem, 2.08vw, 3rem);
+   /* ! Transform  */
+   --translateY-120: translate(0, 120%);
+   --translateY-0: translate(0, 0);
+   /* ! Transition */
+   --transition-transform-03-es-in: all 0.8s ease-in;
 }
 html,
 body {
@@ -11,9 +16,10 @@ body {
    height: 100%;
    font-family: "Lexend", sans-serif;
    font-weight: 400;
+   
 }
 
-body._lock {
+body:has(.wrapper._lock) {
    overflow: hidden;
 }
 
@@ -52,6 +58,8 @@ img {
       hsl(273deg 88% 30%) 56%,
       hsl(262deg 89% 18%) 99%
    );
+
+   
    /* position: relative; */
    /* background-image: url("../../img/back.jpg");
 background-repeat: no-repeat;
@@ -77,13 +85,17 @@ background-position: top; */
    backdrop-filter: blur(5px);
    box-shadow: 0 4px 30px rgb(255 255 255 / 20%);
    border: 1px solid rgb(255 255 255 / 20%);
+   
+}
+.border-glass {
+
 }
 /* ? glass effect */
 /* ?Btn */
 /* Reset */
 .btn {
    font-family: Roboto, sans-serif;
-   font-size:clamp(1.8rem,1.67vw, 2.4rem);
+   font-size: clamp(1.8rem, 1.67vw, 2.4rem);
    line-height: 1.16; /* 28/24 */
    background: none;
    border: none;
@@ -100,7 +112,7 @@ background-position: top; */
 }
 
 .btn.small {
-   min-width: 17.6rem;
+   min-width: 17.1rem;
    max-width: 17.6rem;
    padding: 11px 0px;
    color: hsl(270, 67%, 20%);

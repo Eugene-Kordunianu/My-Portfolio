@@ -1,0 +1,81 @@
+.content__services {
+   width: 100%;
+}
+.content__title {
+   text-transform: uppercase;
+   text-align: center;
+   color: white;
+   font-size: clamp(2.4rem, 2.78vw, 4rem);
+   font-weight: 600;
+   line-height: 1.25; /* 50/40 */
+}
+.content__cards {
+   width: 100%;
+   display: grid;
+   row-gap: 4rem;
+   column-gap: 4rem;
+   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+   perspective: 1000px;
+}
+.card {
+   border-radius: 16px;
+   border: solid rgba(255, 255, 255, 0);
+   box-shadow: 4px 7px 7px 0px transparent;
+   overflow: hidden;
+   display: grid;
+   grid-auto-flow: row;
+   grid-template: minmax(15rem, 20rem) minmax(2rem, auto) 1fr / 1fr;
+   padding: clamp(1rem, 1.39vw, 2rem);
+   gap: 2rem;
+   transition: all 0.4s ease-in-out;
+   box-sizing: border-box;
+   background-color: rgb(255 255 255 / 20%);
+   backdrop-filter: blur(5px);
+   box-shadow: 0 4px 30px rgb(255 255 255 / 20%);
+   /* border: 1px solid rgb(255 255 255 / 20%); */
+   outline: 1px solid rgb(255 255 255 / 40%);
+   transform: perspective(800px) rotateY(0deg) scale(1) rotateX(0deg);
+   transition: 0.25s ease;
+   
+}
+
+.card:hover {
+   border: solid rgba(255, 255, 255, 0.45);
+   box-shadow: 4px 7px 7px 0px #edebe959;
+   box-sizing: border-box;
+}
+
+.card:hover {
+   /* transform: rotateY(0deg) rotateX(8deg);
+   transform-style: preserve-3d; */
+   /* transform: translateZ(-200px); */
+   --rotate-y: 5deg;
+   transform: perspective(900px) rotateY(var(--rotate-y)) scale(1.05) rotateX(3deg);
+}
+.card:last-child:hover {
+   /* transform: rotateY(0deg) rotateX(8deg);
+   transform-style: preserve-3d; */
+   /* transform: translateZ(-200px); */
+   --rotate-y: 8deg;
+   transform: perspective(900px) rotateY(-5deg) scale(1.05) rotateX(3deg);
+}
+.card img {
+   width: 100%;
+   height: 100%;
+   object-fit: scale-down;
+   object-position: center;
+}
+.card__title {
+   font-size: clamp(2.4rem, 2.5vw, 3.6rem);
+   font-weight: 600;
+   line-height: 1.25; /* 45/36 */
+   text-align: center;
+   color: rgb(255, 255, 255);
+}
+.card__subtitle {
+   font-family: "Poppins", sans-serif;
+   font-size: clamp(2rem, 1.67vw, 2.4rem);
+   line-height: 1.5; /* 36/24 */
+   color: #23201e;
+   text-align: center;
+}

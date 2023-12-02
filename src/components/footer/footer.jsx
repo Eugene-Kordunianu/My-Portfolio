@@ -1,6 +1,6 @@
 import "./footer.css";
 
-import Contacts from "../section/contacts/index";
+import Contacts from "../../pagas/contacts/contacts";
 
 export default function Footer() {
 

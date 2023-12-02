@@ -1,0 +1,126 @@
+.section__about {
+   min-height: 63.8rem;
+   width: 100%;
+   padding: 2rem 0rem;
+}
+.about {
+   width: inherit;
+}
+.content__about {
+   display: flex;
+   /* justify-content:space-between; */
+   /* align-items: stretch; */
+   gap: 3rem;
+   width: inherit;
+}
+.content__about-foto-box img {
+   /* width: 100%; */
+   width: clamp(20rem, 32.43vw, 46.7rem);
+   /* transform: translate(0px, 0px); */
+}
+.content__about-foto-box {
+   transform: translate(-500px, 0px);
+   transition: all 1s ease;
+}
+.content__about-foto-box._active {
+   /* transform: translate(0px, 0px); */
+   animation:  cloudMuve 4s linear forwards, gamp 4s ease 5s infinite;
+   
+}
+
+@keyframes cloudMuve {
+   0%{
+      transform: translate(-500px, 40px);
+   }
+   12.5%{
+      transform: translate(-350px, -40px);
+   }   
+   25%{
+      transform: translate(-300px, 40px);
+   }
+   37.5%{
+      transform: translate(-250px, -40px);
+   }
+   50% {
+      transform: translate(-200px, 40px);
+   }
+   62.5%{
+      transform: translate(-150px, -40px);
+
+   }
+   75%{
+      transform: translate(-100px, 40px);
+      
+   }
+   87.5%{
+      transform: translate(-50px, -40px);
+   }
+   100%{
+      transform: translate(0px, 0px);
+
+   }
+}
+@keyframes gamp {
+   0% {
+      transform: translate(0px, 0px);
+   }
+   50%{
+   transform: translate(0px, 10px);
+
+}
+   100%{
+      transform: translate(0px, 0px);
+      
+   }
+}
+.content__about-info-box {
+   border-radius: 16px;
+   box-sizing: border-box;
+   display: flex;
+   flex-flow: column;
+   justify-content: space-between;
+   gap: 3rem;
+   transform: translate(120%, 0px);
+   transition: all 1s linear 0s;
+}
+.content__about-info-box._active {
+   transform: translate(0px, 0px);
+}
+
+.info__title {
+   font-size: clamp(3rem, 2.08vw, 4rem);
+   font-weight: 600;
+   line-height: 1.25; /* 50/40 */
+   text-transform: uppercase;
+   text-align: start;
+   color: white;
+}
+.info__description {
+   width: clamp(30rem, 54.03vw, 77.8rem);
+   font-family: Poppins;
+   font-size: clamp(2rem, 1.67vw, 2.4rem);
+   line-height: 1.5; /* 36/24 */
+   text-align: left;
+   color: white;
+   word-wrap: break-word;
+   word-break: break-word;
+   hyphens: auto;
+}
+.btn {
+}
+.small {
+}
+.check {
+}
+@media (max-width: 767.98px) {
+   .content__about {
+      flex-flow: column-reverse;
+      gap: 0;
+   }
+   .content__about-info-box {
+      align-items: center;
+   }
+   .info__description {
+      width: 100%;
+   }
+}
